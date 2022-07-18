@@ -1,8 +1,19 @@
 /*
+# Descrição:
+Dada uma string de entrada e uma substring, Encontre a frequência de ocorrências de uma substring em uma determinada string.
+# Parâmetros: 
+vector<pair<ld, ld>> pontos -> Vector contendo todos os n vértices. first: coordenada x ; second: coordenada y
 
-Referência:
+# Complexidade:
+O(n)
+
+# Referência:
 https://www.geeksforgeeks.org/frequency-substring-string/
 
+# Problemas:
+https://www.eolymp.com/en/problems/60
+
+Referência:
 */
 
 #include <bits/stdc++.h>
