@@ -1,19 +1,20 @@
 /*
 # Descrição:
-Dada uma string de entrada e uma substring, Encontre a frequência de ocorrências de uma substring em uma determinada string.
+A função totalOccurrences retorna a frequência de ocorrências de uma substring um uma 
+determinada string. Ele utiliza o algoritmo KMPSearch.
+
 # Parâmetros: 
-vector<pair<ld, ld>> pontos -> Vector contendo todos os n vértices. first: coordenada x ; second: coordenada y
+string pat -> substring
+string txt -> string
 
 # Complexidade:
-O(n)
+O(M + N), onde M e N são respectivamente o tamanho da substring e da string em questão.
 
 # Referência:
 https://www.geeksforgeeks.org/frequency-substring-string/
 
 # Problemas:
-https://www.eolymp.com/en/problems/60
-
-Referência:
+https://neps.academy/br/competition/1368/exercise/1956
 */
 
 #include <bits/stdc++.h>
@@ -43,7 +44,7 @@ void computeLPSArray(string pat, int M, int lps[])
             }
 }
   
-int KMPSearch(string pat, string txt)
+int totalOccurrences(string pat, string txt)
 {
     int M = pat.length();
     int N = txt.length();
@@ -80,6 +81,6 @@ int KMPSearch(string pat, string txt)
 
 int main()
 {
-    cout << KMPSearch("luiz", "luizabcluizabcluizabc") << endl;
+    cout << totalOccurrences("luiz", "luizabcluizabcluizabc") << endl;
     return 0;
 }
