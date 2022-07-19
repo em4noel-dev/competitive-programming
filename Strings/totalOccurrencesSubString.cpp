@@ -7,6 +7,9 @@ determinada string. Ele utiliza o algoritmo KMPSearch.
 string pat -> substring
 string txt -> string
 
+# Retorno:
+A quantidade de ocorrências da substring "pat" na string "txt".
+
 # Complexidade:
 O(M + N), onde M e N são respectivamente o tamanho da substring e da string em questão.
 

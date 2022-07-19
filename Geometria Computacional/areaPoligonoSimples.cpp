@@ -8,6 +8,9 @@ utiliza a "Shoelace formula".
 # Parâmetros: 
 vector<pair<ld, ld>> pontos -> Vector contendo todos os n vértices. first: coordenada x ; second: coordenada y
 
+# Retorno:
+A área do polígono simples formado pelos pontos fornecidos.
+
 # Complexidade:
 O(n)
 
