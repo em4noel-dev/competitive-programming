@@ -1,7 +1,7 @@
 
 # Programação Competitiva
 
-Repositório de algoritmos específicos  para resolução de problemas.
+Repositório de algoritmos específicos para resolução de problemas.
 
 Tópicos presentes:
 
