@@ -15,7 +15,8 @@ ull a[MAX] -> vetor global contendo o grau de cada vértice, começando no índi
 "true" caso for possível, "false" caso não for possível.
 
 # Complexidade:
-≈ O(N), onde N é o número de vértices do grafo.
+≈ O(N), onde N é o número de vértices do grafo, considerando que a sequência de graus 
+esteja ordenada em ordem não-crescente.
 
 # Referência:
 Aulas do professor Leandro Miranda Zatesko (UTFPR):
