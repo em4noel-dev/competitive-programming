@@ -14,7 +14,7 @@ vector<int> &nums -> Array base para gerar todas as permutações.
 A função retona um vector<vector<int>> contendo todas as permutações possível do array base;
 
 # Complexidade:
-o(N!*N)
+o(N!*N), onde N é o tamanho do Array.
 
 # Referência:
 https://takeuforward.org/data-structure/print-all-permutations-of-a-string-array/
