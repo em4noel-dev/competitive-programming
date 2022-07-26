@@ -8,8 +8,9 @@ ser resolvidos e uma função *main* exemplo.
 
 Basta copiar e colar!
 
-Tópicos presentes:
+Tópicos presentes: 
 
 - [Geometria Computacional](Geometria%20Computacional) 
 - [Grafos](Grafos)
 - [Strings](Strings)
+- [Matemática](Matematica)
