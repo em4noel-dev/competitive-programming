@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 /*
 # Descrição:
 O objetivo desse algoritmo é gerar todas as permutações possíveis de um array sem a necessidade de 
@@ -14,7 +11,7 @@ vector<int> &nums -> Array base para gerar todas as permutações.
 A função retona um vector<vector<int>> contendo todas as permutações possível do array base;
 
 # Complexidade:
-o(N!*N), onde N é o tamanho do Array.
+O(N!*N), onde N é o tamanho do Array.
 
 # Referência:
 https://takeuforward.org/data-structure/print-all-permutations-of-a-string-array/
@@ -22,6 +19,9 @@ https://takeuforward.org/data-structure/print-all-permutations-of-a-string-array
 # Problemas:
 Problema A - Prova substitutiva de ECOE44 (UNIFEI - 2022.1)
 */
+
+#include<bits/stdc++.h>
+using namespace std;
 
 void recurPermute(vector <int> &ds, vector <int> &nums, vector<vector <int>> &ans, int freq[]) 
 {
