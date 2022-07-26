@@ -31,7 +31,9 @@ Problema B - Prova substitutiva de ECOE44 (UNIFEI - 2022.1)
 using namespace std;
 
 // Grafo exemplo
-int graph[V][V] = {{0, 16, 13, 0, 0, 0}, {0, 0, 10, 12, 0, 0}, {0, 4, 0, 0, 14, 0}, {0, 0, 9, 0, 0, 20}, {0, 0, 0, 7, 0, 4}, {0, 0, 0, 0, 0, 0}};
+int graph[V][V] = {{0, 16, 13, 0,  0, 0}, {0, 0, 10, 12, 0,  0}, 
+                   {0,  4,  0, 0, 14, 0}, {0, 0,  9,  0, 0, 20}, 
+                   {0,  0,  0, 7,  0, 4}, {0, 0,  0,  0, 0,  0}};
 
 bool bfs(int rGraph[V][V], int s, int t, int parent[])
 {
