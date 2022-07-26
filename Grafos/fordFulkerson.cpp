@@ -17,7 +17,7 @@ int t -> Índice do vértice de destino (sumidouro)
 A função retorna o fluxo máximo de um vértice fonte "s" para um vértice destino "t"
 
 # Complexidade:
-O(EV^3), Onde V e E são respectivamente, a quantidade de vértices e arestas do grafo. 
+O(EV^3), Onde V e E são respectivamente, a quantidade de vértices e arestas do grafo.
 
 # Referência:
 https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
@@ -31,76 +31,74 @@ Problema B - Prova substitutiva de ECOE44 (UNIFEI - 2022.1)
 using namespace std;
 
 // Grafo exemplo
-int graph[V][V] = {{ 0, 16, 13, 0,  0, 0}, { 0, 0, 10, 12, 0,  0},
-                   { 0,  4, 0,  0, 14, 0}, { 0, 0,  9,  0, 0, 20},
-                   { 0,  0, 0,  7,  0, 4}, { 0, 0,  0,  0, 0,  0}};
+int graph[V][V] = {{0, 16, 13, 0, 0, 0}, {0, 0, 10, 12, 0, 0}, {0, 4, 0, 0, 14, 0}, {0, 0, 9, 0, 0, 20}, {0, 0, 0, 7, 0, 4}, {0, 0, 0, 0, 0, 0}};
 
 bool bfs(int rGraph[V][V], int s, int t, int parent[])
 {
-	bool visited[V];
-	memset(visited, 0, sizeof(visited));
- 
-	queue<int> q;
-	q.push(s);
-	visited[s] = true;
-	parent[s] = -1;
+    bool visited[V];
+    memset(visited, 0, sizeof(visited));
 
-	while (!q.empty()) 
+    queue<int> q;
+    q.push(s);
+    visited[s] = true;
+    parent[s] = -1;
+
+    while (!q.empty())
     {
-    	int u = q.front();
-    	q.pop();
- 
-    	for (int v = 0; v < V; v++) 
+        int u = q.front();
+        q.pop();
+
+        for (int v = 0; v < V; v++)
         {
-        	if (visited[v] == false && rGraph[u][v] > 0) 
+            if (visited[v] == false && rGraph[u][v] > 0)
             {
-            	if (v == t) 
+                if (v == t)
                 {
-                	parent[v] = u;
-                	return true;
-            	}
-            	q.push(v);
-            	parent[v] = u;
-            	visited[v] = true;
-        	}
-    	}
-	}
-	return false;
+                    parent[v] = u;
+                    return true;
+                }
+                q.push(v);
+                parent[v] = u;
+                visited[v] = true;
+            }
+        }
+    }
+    return false;
 }
 
 int fordFulkerson(int s, int t)
 {
-	int u, v;
-	int rGraph[V][V];
-	for (u = 0; u < V; u++)
-    	for (v = 0; v < V; v++)
-        	rGraph[u][v] = graph[u][v];
+    int u, v;
+    int rGraph[V][V];
+    for (u = 0; u < V; u++)
+        for (v = 0; v < V; v++)
+            rGraph[u][v] = graph[u][v];
 
-	int parent[V];
-	int max_flow = 0;
-	while (bfs(rGraph, s, t, parent)) 
+    int parent[V];
+    int max_flow = 0;
+    while (bfs(rGraph, s, t, parent))
     {
-    	int path_flow = INT_MAX;
-    	for (v = t; v != s; v = parent[v]) 
+        int path_flow = INT_MAX;
+        for (v = t; v != s; v = parent[v])
         {
-        	u = parent[v];
-        	path_flow = min(path_flow, rGraph[u][v]);
-    	}
- 
-    	for (v = t; v != s; v = parent[v]) 
+            u = parent[v];
+            path_flow = min(path_flow, rGraph[u][v]);
+        }
+
+        for (v = t; v != s; v = parent[v])
         {
-        	u = parent[v];
-        	rGraph[u][v] -= path_flow;
-        	rGraph[v][u] += path_flow;
-    	}
- 
-    	max_flow += path_flow;
-	}
-	return max_flow;
+            u = parent[v];
+            rGraph[u][v] -= path_flow;
+            rGraph[v][u] += path_flow;
+        }
+
+        max_flow += path_flow;
+    }
+    return max_flow;
 }
 
 int main()
 {
     cout << "Fluxo maximo entre os vertices 0 e 5: " << fordFulkerson(0, 5);
-	return 0;
+    return 0;
 }
