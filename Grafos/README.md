@@ -4,6 +4,7 @@
 Algoritmos presentes:
 
 - [Breadth First Search (BFS)](bfs.cpp) 
+- [Depth First Search (DFS)](dfs.cpp) 
 - [Dijkstra’s Algorithm (Shortest Path)](dijkstra.cpp) 
 - [Erdős–Gallai Theorem](erdosGallaiTheorem.cpp) 
 - [Ford-Fulkerson Algorithm (Maximum Flow)](fordFulkerson.cpp)
