@@ -1,38 +1,38 @@
 /*
 # Descrição:
-O objetivo desse algoritmo é encontrar o menor polígono convexo (Convex Hull) que
-engloba todos os pontos de um conjuto de pontos fornecido. A função principal é
-o "convexHull()".
+O objetivo desse algoritmo é encontrar a distância mínima de um vértice "s" de origem
+para todos os outros vértices de um digrafo ponderado (somente pesos positivos).
 
 # Parâmetros:
-vector<Point> a -> Vector contendo o conjunto de pontos a ser analisado.
-bool include_collinear -> "true" para que o poligono de retorno contenha pontos 
-colineares e "false" caso contrário (somente vértices)
+vector<vector<pair<int, int>>> listaAdjacencia -> Estrutura que representa o grafo orientado e ponderado.
+int s -> Índice do vértice de origem.
+
+# Constantes:
+const int INF = 0x3f3f3f3f -> Constante representando o infinito.
 
 # Retorno
-A função retorna um vector contendo todos os pontos do menor poligono convexo
-que engloba todos os pontos do conjunto fornecido.
+A função não retorna nada mas cria um vector "custo" contendo o custo mínimo do vértice
+de origem "s" até todos os outros vértices do grafo.
 
 # Complexidade:
-O(nlogn), onde n é o total de pontos.
+O((E+V)*log V), onde E e V são o total de arestas e vértices do grafo.
 
 # Referências:
-https://cp-algorithms.com/geometry/convex-hull.html#grahams-scan-algorithm
-https://www.geeksforgeeks.org/convex-hull-set-2-graham-scan/
+https://www.youtube.com/watch?v=7vzdwI0A-qw&t=503s&ab_channel=Jo%C3%A3oPauloLeite
 
 # Problemas:
-https://www.beecrowd.com.br/judge/pt/problems/view/1464
+https://www.beecrowd.com.br/judge/pt/problems/view/1550
 */
 
 #include <bits/stdc++.h>
 #define endl '\n'
-#define INF 0x3f3f3f3f
-#define SIZE 10001 // Tamanho do grafo
 #define _ ios_base::sync_with_stdio(0); cin.tie(0);
+
+const int INF = 0x3f3f3f3f;
 using namespace std;
 
-vector<vector<pair<int, int>>> listaAdjacencia(SIZE, vector<pair<int,int>>());
-vector<int> custo; // Vetor contendo os custos mínimos de um vértice "A" até todos os outros.
+vector<vector<pair<int, int>>> listaAdjacencia;
+vector<int> custo;
 
 void dijkstra(int s)
 {
@@ -59,4 +59,24 @@ void dijkstra(int s)
             }
         }
     }
+}
+
+int main()
+{
+    // grafo exemplo:
+    listaAdjacencia.resize(5);
+    listaAdjacencia[0].push_back(make_pair(1,  1));
+    listaAdjacencia[0].push_back(make_pair(2,  10));
+    listaAdjacencia[0].push_back(make_pair(4,  3));
+    listaAdjacencia[1].push_back(make_pair(3,  5));
+    listaAdjacencia[3].push_back(make_pair(2,  1));
+    listaAdjacencia[4].push_back(make_pair(2,  6));
+    listaAdjacencia[4].push_back(make_pair(3,  2));
+    
+    dijkstra(0);
+    for(int i = 0; i < custo.size(); i++)
+        cout << i << " - " << custo[i] << endl;
+    cout << endl;
+
+    return 0;
 }
