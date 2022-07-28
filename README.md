@@ -20,6 +20,7 @@ Template padrão para os códigos:
 ```c++
 #include <bits/stdc++.h>
 #define endl '\n'
+#define INF 0x3f3f3f3f
 #define _ ios_base::sync_with_stdio(0); cin.tie(0);
 using namespace std;
 
