@@ -1,7 +1,8 @@
 /*
 # Descrição:
 O objetivo desse algoritmo é encontrar o menor polígono convexo (Convex Hull) que
-engloba todos os pontos de um conjuto de pontos fornecido.
+engloba todos os pontos de um conjuto de pontos fornecido. A função principal é
+o "convexHull()".
 
 # Parâmetros:
 vector<Point> a -> Vector contendo o conjunto de pontos a ser analisado.
@@ -32,8 +33,6 @@ struct Point
 {
     double x, y;
 };
-
-vector<Point> points;
 
 int orientation(Point a, Point b, Point c) 
 {
