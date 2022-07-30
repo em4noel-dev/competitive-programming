@@ -2,4 +2,4 @@
 
 Algoritmos presentes:
 
-- [Find transpose of a matrix](transpose.cpp.cpp)
+- [Find transpose of a matrix](transpose.cpp)
