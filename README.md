@@ -14,6 +14,7 @@ Tópicos presentes:
 - [Grafos](Grafos)
 - [Strings](Strings)
 - [Matemática](Matematica)
+- [Matrizes](Matrizes)
 
 Template padrão para os códigos:
 
