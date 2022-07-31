@@ -1,6 +1,6 @@
 /*
 # Descrição:
-O objetivo da função "bfs()" é aplicar o algoritmo de busca em profundidade em um 
+O objetivo da função "dfs()" é aplicar o algoritmo de busca em profundidade em um 
 grafo sem pesos nas arestas começando de um vértice "u". O objetivo da função
 "bfs_explore()" é aplicar o algoritmo bfs em todos as componentes conexas do grafo.
 Nesse código o grafo é representado por lista de adjacência.
