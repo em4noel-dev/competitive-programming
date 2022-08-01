@@ -21,7 +21,6 @@ https://neps.academy/br/competition/1368/exercise/1956
 */
 
 #include <bits/stdc++.h>
-typedef long long int lli;
 using namespace std;
 
 void computeLPSArray(string pat, int M, int lps[])
