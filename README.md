@@ -1,7 +1,7 @@
 
 # Programação Competitiva
 
-Repositório de algoritmos específicos para resolução de problemas.
+Repositório de algoritmos específicos para resolução de problemas em C++.
 Cada algoritmo possui uma pequena descrição explicando os parâmetros,
 os retornos, a complexidade, as referências, alguns problemas que podem
 ser resolvidos e uma função *main* exemplo. 
@@ -12,9 +12,10 @@ Tópicos presentes:
 
 - [Geometria Computacional](Geometria%20Computacional) 
 - [Grafos](Grafos)
-- [Strings](Strings)
 - [Matemática](Matematica)
 - [Matrizes](Matrizes)
+- [Programação Dinâmica](Programa%C3%A7%C3%A3o%20Din%C3%A2mica/)
+- [Strings](Strings)
 
 Template padrão para os códigos:
 
