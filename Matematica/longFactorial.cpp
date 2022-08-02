@@ -25,7 +25,7 @@ https://www.geeksforgeeks.org/factorial-large-number/
 Problema G - Simulado UFU 3 - Matemática
 */
 
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
  
 #define MAX 500
