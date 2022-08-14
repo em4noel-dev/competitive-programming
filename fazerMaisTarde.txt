@@ -1,19 +1,1 @@
-void floydWarshall(int V)
-{
-    int i, j, k;
-    for (k = 0; k < V; k++)
-        for (i = 0; i < V; i++)
-            for (j = 0; j < V; j++) 
-                if (d[i][j] > (d[i][k] + d[k][j]) && (d[k][j] != INF && d[i][k] != INF))
-                    d[i][j] = d[i][k] + d[k][j];
-}
-
-bool isInside(int circle_x, int circle_y, int rad, int x, int y)
-{
-    if ((x - circle_x) * (x - circle_x) + (y - circle_y) * (y - circle_y) <= rad * rad)
-        return true;
-    else
-        return false;
-}
-
 FAZER O PROBLEMA BEE 1543
