@@ -1,7 +1,8 @@
 /*
 # Descrição:
 O objetivo desse algoritmo é encontrar a distância mínima entre todos os pares
-de vértices de um grafo representado por matriz de adjacências.
+de vértices de um grafo representado por matriz de adjacências (aceita arestas
+com pesos negativos).
 
 # Parâmetros: 
 int V -> Total de vértices do grafo.
