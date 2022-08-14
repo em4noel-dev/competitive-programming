@@ -8,11 +8,6 @@ void floydWarshall(int V)
                     d[i][j] = d[i][k] + d[k][j];
 }
 
-double distance(int x1, int y1, int x2, int y2)
-{
-    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2) * 1.0);
-}
-
 bool isInside(int circle_x, int circle_y, int rad, int x, int y)
 {
     if ((x - circle_x) * (x - circle_x) + (y - circle_y) * (y - circle_y) <= rad * rad)
