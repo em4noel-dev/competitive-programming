@@ -1,7 +1,8 @@
 /*
 # Descrição:
-A função "is_prime(int n)" tem como objetivo verificar se um dado número
-é primo ou não. Um número primo é aquele que é dividido apenas por um e por ele mesmo. 
+A função "is_prime(int n)" tem como objetivo verificar se um dado número inteiro positivo
+(diferente de zero) é primo ou não. Um número primo é aquele que é dividido apenas por 
+um e por ele mesmo. 
 
 # Parâmetros: 
 int n -> Número a ser realizado o teste de primalidade.
