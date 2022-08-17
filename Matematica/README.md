@@ -2,6 +2,7 @@
 
 Algoritmos presentes:
 
+- [Modular Arithmetic](aritimeticaModular.txt)
 - [Check if a number is prime or not](checkPrime.cpp)
 - [Convert a number from base A to base B](convertAnyBase.cpp)
 - [Count digits in a factorial (Kamenetsky’s formula)](totalDigitsFatorial.cpp)

@@ -1,0 +1,26 @@
+Algumas propriedades da aritmética Modular:
+
+Adição Modular:
+-> (a + b) mod m = ((a mod m) + (b mod m)) mod m
+
+Subtração Modular:
+-> (a - b) mod m = ((a mod m) - (b mod m)) mod m
+
+Multiplicação Modular:
+-> (a * b) mod m = ((a mod m) * (b mod m)) mod m
+-> (a * b) mod m = ((a mod m) * b) mod m
+
+Divisão Modular:
+-> (a / b) mod m = (a * (inverse of b)) mod m
+
+Exponenciação Modular:
+-> A^B mod C = ( (A mod C)^B ) mod C
+
+Identidade:
+-> (a mod m) mod m = a mod m
+
+Referências + outras propriedades como Inversa Modular/Exponenciação Modular Rápida:
+https://math.stackexchange.com/questions/5366/very-simple-question-but-what-is-the-proof-that-x-y-mod-m-x-mod-m-y-mod
+https://www.hackersfriend.com/articles/modular-arithmetic-for-competitive-programming
+https://pt.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/modular-multiplication
+https://en.wikipedia.org/wiki/Modulo_operation
