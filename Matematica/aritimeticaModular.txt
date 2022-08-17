@@ -19,6 +19,9 @@ Exponenciação Modular:
 Identidade:
 -> (a mod m) mod m = a mod m
 
+Resto de divisão de um número utilizando seus dígitos: 
+123 mod K = (((1 mod K)*10 + 2) mod K)*10 + 3) mod K
+
 Referências + outras propriedades como Inversa Modular/Exponenciação Modular Rápida:
 https://math.stackexchange.com/questions/5366/very-simple-question-but-what-is-the-proof-that-x-y-mod-m-x-mod-m-y-mod
 https://www.hackersfriend.com/articles/modular-arithmetic-for-competitive-programming
