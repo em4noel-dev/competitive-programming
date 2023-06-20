@@ -52,6 +52,24 @@ void dfs(int u, int comp)
 	ccnum[u] = comp;
 	for(v = 0; v < adj[u].size(); v++)
     	dfs(adj[u][v], comp);
+    
+    /*
+    O trecho abaixo popula o vetor leaf[u] com a quantidade de folhas abaixo do vértice u.
+
+    if(adj[u].size() == 1 && u != 1) 
+    {
+        leaf[u] = 1;
+    }
+    else
+        for(ll v = 0; v < adj[u].size(); v++)
+        {
+            if(!visited[adj[u][v]])
+            {
+                dfs(adj[u][v]);
+                leaf[u] += leaf[adj[u][v]];
+            }
+        }
+    */
 }
 
 void dfs_explore(int vertices)
